@@ -44,7 +44,6 @@
             this.cdtime = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.modify = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.updatelist = new System.Windows.Forms.Button();
             this.Remove = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
@@ -56,6 +55,8 @@
             this.ComparTable = new System.Windows.Forms.Button();
             this.ModifyTable = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,15 +206,6 @@
             this.modify.UseVisualStyleBackColor = true;
             this.modify.Click += new System.EventHandler(this.modify_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(511, 303);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(455, 184);
-            this.listBox1.TabIndex = 16;
-            // 
             // updatelist
             // 
             this.updatelist.Location = new System.Drawing.Point(892, 493);
@@ -263,6 +255,7 @@
             this.Compar.TabIndex = 22;
             this.Compar.Text = "比對";
             this.Compar.UseVisualStyleBackColor = true;
+            this.Compar.Click += new System.EventHandler(this.Compar_Click);
             // 
             // ModifyData
             // 
@@ -321,11 +314,24 @@
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listView1.Location = new System.Drawing.Point(542, 309);
+            this.listView1.Name = "listView1";
+            this.listView1.ShowGroups = false;
+            this.listView1.Size = new System.Drawing.Size(424, 178);
+            this.listView1.TabIndex = 29;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Tile;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 629);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.ModifyTable);
             this.Controls.Add(this.ComparTable);
@@ -337,7 +343,6 @@
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Remove);
             this.Controls.Add(this.updatelist);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.modify);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cdtime);
@@ -381,7 +386,6 @@
         private System.Windows.Forms.TextBox cdtime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button modify;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button updatelist;
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.Button Delete;
@@ -393,6 +397,8 @@
         private System.Windows.Forms.Button ComparTable;
         private System.Windows.Forms.Button ModifyTable;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }
 
